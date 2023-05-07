@@ -41,6 +41,15 @@
     margin-bottom: 30px;
   }
 
+  ol {  
+    list-style-type: none;   
+    color: white;
+  }  
+  ul {  
+    list-style-type: none; 
+    color: white;
+  }  
+
   .button {
     border-radius: 8px;
     background-color: var(--color-primary);
