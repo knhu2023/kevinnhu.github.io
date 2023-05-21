@@ -48,7 +48,16 @@
   ul {  
     list-style-type: none; 
     color: white;
-  }  
+  }
+       
+  th {
+    color: white;
+  }
+  
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .button {
     border-radius: 8px;
