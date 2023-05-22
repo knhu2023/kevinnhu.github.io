@@ -345,12 +345,13 @@
       } else if (score >= 7) {
         scoreText.innerHTML = "Good job! You scored " + score + " out of 10.";
       } else {
-        scoreText.innerHTML = "You scored " + score + " out of 2. Keep practicing!";
+        scoreText.innerHTML = "You scored " + score + " out of 10. Keep practicing!";
       }
 
       // Hide the form and display the score
-      // document.getElementById("quizForm").style.display = "none";
-      // document.getElementById("score").style.display = "block";
+      document.getElementById("quizForm").style.display = "none";
+      document.getElementById("score").style.display = "block";
+      <a href="index.html" class="btn btn-secondary mt-3">Go to Home</a>
     }
   </script>
 </body>
