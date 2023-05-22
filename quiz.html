@@ -16,6 +16,9 @@
 <body>
   <div class="container">
     <h1>Quiz</h1>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
     <form id="quizForm">
       <div class="form-group">
         <label for="name">Name:</label>
@@ -29,107 +32,224 @@
       <h2>Questions</h2>
       <hr>
 
-      <div class="form-group">
-        <label for="question1">Question 1: What is the most common custom keyboard layout?</label>
-        <select class="form-control" id="question1" required>
-          <option value="">Select an option</option>
-          <option value="75">75%</option>
-          <option value="65">65%</option>
-          <option value="60">60%</option>
-          <option value="40">40%</option>
-        </select>
+      <div class="accordion" id="questionAccordion">
+        <div class="card">
+          <div class="card-header" id="question1Header">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#question1Collapse" aria-expanded="true" aria-controls="question1Collapse">
+                Question 1: What is the most common custom keyboard layout?
+              </button>
+            </h2>
+          </div>
+
+          <div id="question1Collapse" class="collapse show" aria-labelledby="question1Header" data-parent="#questionAccordion">
+            <div class="card-body">
+              <select class="form-control" id="question1" required>
+                <option value="">Select an option</option>
+                <option value="75">75%</option>
+                <option value="65">65%</option>
+                <option value="60">60%</option>
+                <option value="40">40%</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="question2Header">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#question2Collapse" aria-expanded="true" aria-controls="question2Collapse">
+                Question 2: Which component helps to customize the feel and sound of your keyboard?
+              </button>
+            </h2>
+          </div>
+
+          <div id="question2Collapse" class="collapse" aria-labelledby="question2Header" data-parent="#questionAccordion">
+            <div class="card-body">
+              <select class="form-control" id="question2" required>
+                <option value="">Select an option</option>
+                <option value="stabilizers">Stabilizers</option>
+                <option value="switches">Switches</option>
+                <option value="case">Case</option>
+                <option value="keycaps">Keycaps</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header" id="question3Header">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#question3Collapse" aria-expanded="true" aria-controls="question3Collapse">
+                Question 3: True or False: A soldering iron is crucial for a custom mechanical keyboard build.
+              </button>
+            </h2>
+          </div>
+        
+        <div id="question3Collapse" class="collapse" aria-labelledby="question3Header" data-parent="#questionAccordion">
+            <div class="card-body">
+              <select class="form-control" id="question3" required>
+                <option value="">Select an option</option>
+                <option value="true">True</option>
+                <option value="false">False</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header" id="question4Header">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#question4Collapse" aria-expanded="true" aria-controls="question4Collapse">
+                Question 4: True or False: It's okay if some keys don't light up and register during the PCB test.
+              </button>
+            </h2>
+          </div>
+        
+        <div id="question4Collapse" class="collapse" aria-labelledby="question4Header" data-parent="#questionAccordion">
+            <div class="card-body">
+              <select class="form-control" id="question4" required>
+                <option value="">Select an option</option>
+                <option value="true">True</option>
+                <option value="false">False</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header" id="question5Header">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#question5Collapse" aria-expanded="true" aria-controls="question5Collapse">
+                Question 5: Which of the following is a benefit as a result of lubing your key switches?
+              </button>
+            </h2>
+          </div>
+        
+        <div id="question5Collapse" class="collapse" aria-labelledby="question5Header" data-parent="#questionAccordion">
+            <div class="card-body">
+              <select class="form-control" id="question5" required>
+                <option value="">Select an option</option>
+                <option value="springping">Less Spring Ping Noises</option>
+                <option value="scratchiness">Less Scratchiness</option>
+                <option value="keystroke">Smoother Keystroke</option>
+                <option value="sound">Better Sound</option>
+                <option value="alloftheabove">All of the Above</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+       <div class="card">
+          <div class="card-header" id="question6Header">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#question6Collapse" aria-expanded="true" aria-controls="question6Collapse">
+                Question 6: True or False: Modifying stabilizers is less time-consuming than lubing switches.
+              </button>
+            </h2>
+          </div>
+        
+        <div id="question6Collapse" class="collapse" aria-labelledby="question6Header" data-parent="#questionAccordion">
+            <div class="card-body">
+              <select class="form-control" id="question6" required>
+                <option value="">Select an option</option>
+                <option value="true">True</option>
+                <option value="false">False</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header" id="question7Header">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#question7Collapse" aria-expanded="true" aria-controls="question7Collapse">
+                Question 7: True or False: You can forget the plate installing your switches into the PCB.
+              </button>
+            </h2>
+          </div>
+        
+        <div id="question7Collapse" class="collapse" aria-labelledby="question7Header" data-parent="#questionAccordion">
+            <div class="card-body">
+              <select class="form-control" id="question7" required>
+                <option value="">Select an option</option>
+                <option value="true">True</option>
+                <option value="false">False</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header" id="question8Header">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#question8Collapse" aria-expanded="true" aria-controls="question8Collapse">
+                Question 8: Which of the following PCB designs does not require soldering?
+              </button>
+            </h2>
+          </div>
+        
+        <div id="question8Collapse" class="collapse" aria-labelledby="question8Header" data-parent="#questionAccordion">
+            <div class="card-body">
+              <select class="form-control" id="question8" required>
+                <option value="">Select an option</option>
+                <option value="standard">Standard PCB</option>
+                <option value="hotswappable">Hot-Swappable PCB</option>
+                <option value="throughhole">Through-Hole PCB</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header" id="question9Header">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#question9Collapse" aria-expanded="true" aria-controls="question9Collapse">
+                Question 9: True or False: You MUST add foam in your keyboard case.
+              </button>
+            </h2>
+          </div>
+        
+        <div id="question9Collapse" class="collapse" aria-labelledby="question9Header" data-parent="#questionAccordion">
+            <div class="card-body">
+              <select class="form-control" id="question9" required>
+                <option value="">Select an option</option>
+                <option value="true">True</option>
+                <option value="false">False</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header" id="question10Header">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#question10Collapse" aria-expanded="true" aria-controls="question10Collapse">
+                Question 10: Which of the following typing websites is best for testing your keyboard with?
+              </button>
+            </h2>
+          </div>
+        
+        <div id="question10Collapse" class="collapse" aria-labelledby="question10Header" data-parent="#questionAccordion">
+            <div class="card-body">
+              <select class="form-control" id="question10" required>
+                <option value="">Select an option</option>
+                <option value="typeracer">TypeRacer</option>
+                <option value="monkeytype">MonkeyType</option>
+                <option value="userchoice">Whatever website you are comfortable with</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        <!-- Add more questions with accordion structure -->
+
       </div>
 
-      <div class="form-group">
-        <label for="question2">Question 2: Which component helps to customize the feel and sound of your keyboard?</label>
-        <select class="form-control" id="question2" required>
-          <option value="">Select an option</option>
-          <option value="stabilizers">Stabilizers</option>
-          <option value="switches">Switches</option>
-          <option value="case">Case</option>
-          <option value="keycaps">Keycaps</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="question3">Question 3: True or False: A soldering iron is crucial for a custom mechanical keyboard build.</label>
-        <select class="form-control" id="question3" required>
-          <option value="">Select an option</option>
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="question4">Question 4: True or False: It's okay if some keys don't light up and register during the PCB test.</label>
-        <select class="form-control" id="question4" required>
-          <option value="">Select an option</option>
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="question5">Question 5: Which of the following is a benefit as a result of lubing your key switches?</label>
-        <select class="form-control" id="question5" required>
-          <option value="">Select an option</option>
-          <option value="springping">Less Spring Ping Noises</option>
-          <option value="scratchiness">Less Scratchiness</option>
-          <option value="keystroke">Smoother Keystroke</option>
-          <option value="sound">Better Sound</option>
-          <option value="alloftheabove">All of the Above</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="question6">Question 6: True or False: Modifying stabilizers is less time-consuming than lubing switches.</label>
-        <select class="form-control" id="question6" required>
-          <option value="">Select an option</option>
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="question7">Question 7: True or False: You can forget the plate installing your switches into the PCB.</label>
-        <select class="form-control" id="question7" required>
-          <option value="">Select an option</option>
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="question8">Question 8: Which of the following PCB designs does not require soldering?</label>
-        <select class="form-control" id="question8" required>
-          <option value="">Select an option</option>
-          <option value="standard">Standard PCB</option>
-          <option value="hotswappable">Hot-Swappable PCB</option>
-          <option value="throughhole">Through-Hole PCB</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="question9">Question 9: True or False: You MUST add foam in your keyboard case.</label>
-        <select class="form-control" id="question9" required>
-          <option value="">Select an option</option>
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="question10">Question 10: Which of the following typing websites is best for testing your keyboard with?</label>
-        <select class="form-control" id="question10" required>
-          <option value="">Select an option</option>
-          <option value="typeracer">TypeRacer</option>
-          <option value="monkeytype">MonkeyType</option>
-          <option value="userchoice">Whatever website you are comfortable with</option>
-        </select>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <a href="index.html" class="btn btn-secondary">Go to Home</a>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      <a href="index.html" class="btn btn-secondary mt-3">Go to Home</a>
     </form>
     <div id="score" style="display: none;">
       <h2>Quiz Score</h2>
@@ -210,6 +330,8 @@
       if (question10 === "userchoice") {
         score++;
       }
+      
+      // Check the answers for the remaining questions
 
       return score;
     }
@@ -229,6 +351,7 @@
       // Hide the form and display the score
       document.getElementById("quizForm").style.display = "none";
       document.getElementById("score").style.display = "block";
+      // <a href="index.html" class="btn btn-secondary mt-3">Go to Home</a>
     }
   </script>
 </body>
